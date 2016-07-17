@@ -1,0 +1,10 @@
+﻿create external table hq_keywords_report_hour(
+keyword string,
+impression int,
+click int,
+cost int,
+bid int
+)
+PARTITIONED BY(d string,h string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t';

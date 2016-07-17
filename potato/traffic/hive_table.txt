@@ -1,0 +1,14 @@
+create table hq_traffic_report(
+day string,
+platform string,
+placement string,
+channel string,
+device string,
+system string,
+width int,
+height int,
+count int
+)
+PARTITIONED BY(d string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t';

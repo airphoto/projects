@@ -1,0 +1,9 @@
+driver=com.mysql.jdbc.Driver
+mysqlurl=jdbc:mysql://10.136.49.179/haoqu_production?rewriteBatchedStatements=true&useServerPrepStmts=false&tinyInt1isBit=false
+uname=persim
+pwd=Hq6Rr3MJwv3rAPerSi
+maxActive=90
+init=10
+minIdle=20
+maxIdle=90
+checkpointPath=LogStreaming

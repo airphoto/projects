@@ -1,0 +1,121 @@
+# tracking日志表
+
+ DROP TABLE IF EXISTS hq_all_report;
+ CREATE TABLE hq_all_report (
+  client_id string,
+  group_id int,
+  ad_id int,
+  creative_id int,
+  tag_id string,
+  impression int,
+  click int,
+  cost double,
+  download int,
+  follow int,
+  install int,
+  active int,
+  hour tinyint,
+  day string,
+  platform string,
+  channelid string,
+  hqplacementid string
+  )
+  partitioned by (d string,h string)
+  ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '\t';
+
+DROP TABLE IF EXISTS hq_report;
+CREATE TABLE hq_report (
+  client_id string,
+  group_id int,
+  ad_id int,
+  creative_id int,
+  tag_id string,
+  impression int,
+  click int,
+  cost double,
+  download int,
+  follow int,
+  install int,
+    active int,
+  hour tinyint,
+  day string,
+  platform string,
+  hqplacementid string
+)
+partitioned by (d string,h string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t';
+
+DROP TABLE IF EXISTS hq_channel_report;
+CREATE TABLE hq_channel_report 
+( client_id string,
+  group_id int,
+  ad_id int,
+  channel_id string,
+  impression int,
+  click int,
+  cost double,
+  download int,
+  follow int,
+  install int,
+  active int,
+  hour tinyint,
+  day string,
+  platform string,
+  hqplacementid string
+)
+partitioned by (d string,h string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t';
+
+
+DROP TABLE IF EXISTS hq_geo_report;
+CREATE TABLE hq_geo_report (
+  client_id string,
+  group_id int,
+  ad_id int,
+  city_code string,
+  impression int,
+  click int,
+  cost double,
+  download int,
+  follow int,
+  install int,
+  active int,
+  hour tinyint,
+  day string,
+  platform string,
+  hqplacementid string
+)
+partitioned by (d string,h string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t';
+
+DROP TABLE IF EXISTS hq_tracking_format_hour;
+create external table hq_tracking_format_hour(
+hqclientid string,
+hqgroupid  int,
+hqadid     int,
+hqcreativeid int,
+hqrefer    string,
+hqtime     int,
+hqevent    int,
+hqurl      string,
+hqprice    double, 
+hqsource   string,
+hquid      string,
+hqcity     string,
+tagid      string,
+channelid  string,
+cookie string,
+uuid string,
+did string,
+impid string,
+hqplacementid string
+)
+partitioned by (day string,hour string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t';
+
+

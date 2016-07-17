@@ -1,0 +1,14 @@
+#host=uxuanproduct.mysql.rds.aliyuncs.com
+#port=3306
+#username=haoqu_dev
+#psw=rdsyaquuya6vvby
+#database=haoqu_dev
+#test=formatlog
+#hadoop_tracking_out_path=/user/work/trackingFormatLog
+host=123.59.11.103
+port=3306
+username=root
+psw=mysql
+database=haoqu_dev
+test=test
+hadoop_tracking_out_path=/lhs/work/trackingFormatLog

@@ -1,0 +1,22 @@
+﻿逻辑回归模型
+
+1，需要统计的列名及其缩写文件,用逗号隔开，并保存到hdfs上，在config中的变量名称是 column_short_path
+如
+subchannel,sc
+hqcreativeid,cr
+
+2，统计完成后把统计的feature加上前缀缩写，并添加上其对应的index，index从1开始，保存到hdfs中，在config中的变量名称是 feature_index_path
+
+3，格式化数据  存储路径在config中的变量名称是 format_data_path
+
+4，模型存及auc  的储路径在config中的变量名称是save_model_path_pre
+
+5，host，port是redis需要的主机和端口
+
+6，training，test 分别是数据训练和测试的比例
+
+
+7，使用方式
+
+sh lr.sh lr_1 20160115 20160120
+模型编号是lr_1,起止时间分别是  20160115  20160120

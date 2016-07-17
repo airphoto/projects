@@ -1,0 +1,6 @@
+1. 请将源代码放入src/main/scala,src/main/java,分别对应scala和java源程序，测试代码分别是src/test/scala，src/test/java, 对应的资源文件放置到src/main/resources,比如rabbitmq_server_config.properties
+2. 修改pom.xml 配置<project><artifactId>内容为你所需要的，比如traffic_report
+3. 添加pom.xml 配置<dependency><scope>provided</scope>，如果需要排除相关内容在最终打包的jar包里面，否则移除<dependency>里面的这一行
+4. mvn clean compile
+5. mvn clean package
+6. cd target, 改名traffic_report-jar-with-dependencies.jar 到 traffic_report.jar

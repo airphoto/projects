@@ -1,0 +1,79 @@
+﻿drop table if exists idfa_status;
+
+create external table idfa_status(
+idfa string,
+ipcount string,
+vcount string,
+ipmax string,
+vcountmax string,
+vdays string,
+vdaymean string,
+vipmean string,
+time string
+)
+partitioned by (d string)
+row format delimited
+fields terminated by '\t';
+
+
+
+drop table if exists ip_status;
+
+create external table ip_status(
+ip string,
+idfacount string,
+vcount string,
+vcountmax string,
+vdays string,
+vdaymean string,
+time string,
+ipdaymean string
+)
+partitioned by (d string)
+row format delimited
+fields terminated by '\t';
+
+
+
+drop table if exists detection;
+
+create external table detection(
+name string,
+probability string
+)
+partitioned by (d string,target string)
+row format delimited
+fields terminated by '\t';
+
+
+
+drop table if exists sections;
+
+create external table sections(
+probability string,
+count string
+)
+partitioned by (d string,target string)
+row format delimited
+fields terminated by '\t';
+
+drop table if exists ip_filter;
+
+create external table ip_filter(
+ip string,
+videos int,
+devices int
+)
+partitioned by (d string)
+row format delimited
+fields terminated by '\t';
+
+drop table if exists idfa_filter;
+
+create external table idfa_filter(
+idfa string,
+videos int
+)
+partitioned by (d string)
+row format delimited
+fields terminated by '\t';

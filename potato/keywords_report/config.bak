@@ -1,0 +1,14 @@
+cores=6
+mem=2g
+depend=/data/apply/depend/amqp-client-3.6.1.jar
+driver=/usr/local/hive-1.2.1/lib/mysql-connector-java-5.1.7-bin.jar
+host=10.136.56.198
+username=hhg08
+pwd=123456
+report_hour_out_pre=/user/work/keywords/report_hour
+channel_keywords_file_path=/path_to_keywords_file
+channel_out_pre=/user/work/keywords/channelpv
+keywords_pv_file_path=/path_to_keywords_file
+keywords_out_pre=/user/work/keywords/keywordpv
+relation_keywords_file_path=/path_to_keywords_file
+relation_out_path_pre=/user/work/keywords/relation

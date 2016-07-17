@@ -1,0 +1,10 @@
+brokers=10.136.49.179:2181
+group=test-consumer-group
+topics=format3
+threads=15
+secondToCount=10
+table=hq_all_report
+dependents=/data/apply/spark/lib/spark-examples-1.5.1-hadoop2.4.0.jar,/data/apply/depend/mysql-connector-java-5.1.38.jar
+driver=/data/apply/depend/mysql-connector-java-5.1.38.jar
+cores=6
+mem=1g

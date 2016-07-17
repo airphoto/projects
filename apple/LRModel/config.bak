@@ -1,0 +1,8 @@
+host=123.59.25.137
+port=6379
+column_short_path=/test/source/columns/columns
+feature_index_path=/test/source/data/features
+format_data_path=/test/source/data/formatdata
+save_model_path_pre=/test/source/data/model
+training=0.8
+test=0.2

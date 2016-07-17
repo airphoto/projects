@@ -1,0 +1,14 @@
+days_to=4
+cores=21
+mem=7g
+out=/test/work/request/anomaly_detection/stat
+part=10
+database=formatlog
+idfa_video_filter=1200
+ip_device_filter=2000
+ip_video_filter=3000
+partitions=10
+filter_out=/test/work/request/anomaly_detection/filter
+redis_host=10.254.168.153
+redis_port=7002
+live=2592000

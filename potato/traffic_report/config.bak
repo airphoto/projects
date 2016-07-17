@@ -1,0 +1,6 @@
+cores=6
+mem=2g
+driver=/usr/local/hive-1.2.1/lib/mysql-connector-java-5.1.7-bin.jar
+host=10.136.56.198
+username=hhg08
+pwd=123456
